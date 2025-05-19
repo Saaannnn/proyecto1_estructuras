@@ -1,0 +1,164 @@
+Seccion: Algoritmos y Estructuras de Datos
+Facultad: Ingeniería
+Escuela: Computación
+Cátedra: A
+Profesor: Carlos Perez, ci: 11111111
+Bloques: 2 2 2
+Estudiantes:
+Maria Perez, ci: 31000000
+Carlos Perez, ci: 31000001
+Omar Acosta, ci: 31000002
+
+Seccion: Estructuras de Datos y Algoritmos
+Facultad: Ingeniería
+Escuela: Computación
+Cátedra: A
+Profesor: Nancy Martinez, ci: 11111112
+Bloques: 2 2 2
+Estudiantes:
+Ramon Perez, ci: 31000004
+Carlos Martinez, ci: 31000005
+Jose Acosta, ci: 31000006
+
+Seccion: Matemáticas Discretas
+Facultad: Ciencias Básicas
+Escuela: Matemáticas
+Cátedra: B
+Profesor: Henry Marcano, ci: 11111113
+Bloques: 2 2 1
+Estudiantes:
+Maria Perez, ci: 31000000
+Carlos Perez, ci: 31000001
+Omar Acosta, ci: 31000002
+Ramon Perez, ci: 31000004
+Carlos Martinez, ci: 31000005
+Jose Acosta, ci: 31000006
+
+Seccion: Álgebra Lineal
+Facultad: Ingeniería
+Escuela: Matemáticas
+Cátedra: B
+Profesor: Henry Alvarez, ci: 11111114
+Bloques: 2 2 1
+Estudiantes:
+Ramon Perez, ci: 31000004
+Carlos Martinez, ci: 31000005
+Jose Acosta, ci: 31000006
+Henry Alvarez, ci: 31000003
+
+Seccion: Álgebra Lineal
+Facultad: Ingeniería
+Escuela: Matemáticas
+Cátedra: B
+Profesor: Lisandro Alvarado, ci: 11111121
+Bloques: 2 2 1
+Estudiantes:
+Maria Perez, ci: 31000000
+Carlos Perez, ci: 31000001
+Omar Acosta, ci: 31000002
+
+Seccion: Algoritmos y Programación
+Facultad: Ingeniería
+Escuela: Computación
+Cátedra: A
+Profesor: Carlos Perez, ci: 11111111
+Bloques: 3
+Estudiantes:
+Maria Perez, ci: 31000000
+Carlos Perez, ci: 31000001
+Omar Acosta, ci: 31000002
+Henry Alvarez, ci: 31000003
+
+Seccion: Algoritmos y Programación
+Facultad: Ingeniería
+Escuela: Computación
+Cátedra: A
+Profesor: Nancy Martinez, ci: 11111112
+Bloques: 3
+Estudiantes:
+Ramon Perez, ci: 31000004
+Carlos Martinez, ci: 31000005
+Jose Acosta, ci: 31000006
+
+Seccion: Cálculo Diferencial
+Facultad: Ingeniería
+Escuela: Matemáticas
+Cátedra: C
+Profesor: Rodrigo Cabezas, ci: 11111119
+Bloques: 3
+Estudiantes:
+Maria Perez, ci: 31000000
+Carlos Perez, ci: 31000001
+Omar Acosta, ci: 31000002
+Henry Alvarez, ci: 31000003
+
+Seccion: Cálculo Diferencial
+Facultad: Ingeniería
+Escuela: Matemáticas
+Cátedra: C
+Profesor: Pedro Soto, ci: 11111120
+Bloques: 3
+Estudiantes:
+Ramon Perez, ci: 31000004
+Carlos Martinez, ci: 31000005
+Jose Acosta, ci: 31000006
+
+Seccion: Estructuras de Datos y Algoritmos
+Facultad: Ingeniería
+Escuela: Computación
+Cátedra: A
+Profesor: Ana Rodriguez, ci: 11111116
+Bloques: 2 2 2
+Estudiantes:
+Roger Perez, ci: 31000007
+Mauricio Perez, ci: 31000008
+Nidia Vargas, ci: 31000009
+
+Seccion: Algoritmos y Estructuras de Datos
+Facultad: Ingeniería
+Escuela: Computación
+Cátedra: A
+Profesor: Ramon Aveledo, ci: 11111117
+Bloques: 2 2 2
+Estudiantes:
+Eliseo Pereira, ci: 31000010
+Carlos Martinez, ci: 31000011
+Carmen Levi, ci: 31000012
+
+Seccion: Matemáticas Discretas
+Facultad: Ciencias Básicas
+Escuela: Matemáticas
+Cátedra: B
+Profesor: Ana Cavalli, ci: 11111118
+Bloques: 2 2 1
+Estudiantes:
+Roger Perez, ci: 31000007
+Mauricio Perez, ci: 31000008
+Nidia Vargas, ci: 31000009
+Eliseo Pereira, ci: 31000010
+Carlos Martinez, ci: 31000011
+Carmen Levi, ci: 31000012
+
+Seccion: Álgebra Lineal
+Facultad: Ingeniería
+Escuela: Matemáticas
+Cátedra: B
+Profesor: Ana Cavalli, ci: 11111118
+Bloques: 2 2 1
+Estudiantes:
+Eliseo Pereira, ci: 31000010
+Carlos Martinez, ci: 31000011
+Carmen Levi, ci: 31000012
+Alfredo Acosta, ci: 31000013
+
+Seccion: Algoritmos y Programación
+Facultad: Ingeniería
+Escuela: Computación
+Cátedra: A
+Profesor: Ana Rodriguez, ci: 11111116
+Bloques: 3
+Estudiantes:
+Roger Perez, ci: 31000007
+Mauricio Perez, ci: 31000008
+Nidia Vargas, ci: 31000009
+Alfredo Acosta, ci: 31000013
