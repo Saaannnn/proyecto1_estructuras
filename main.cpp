@@ -1,103 +1,11 @@
-// Conjunto.h (de Lab3)
-#ifndef CONJUNTO_H
-#define CONJUNTO_H
-
-#include <vector>
-#include <algorithm>
-
-// Plantilla de conjunto simple
-template<typename T>
-class Conjunto {
-private:
-    std::vector<T> elems;
-public:
-    void insertar(const T &e) {
-        if (!pertenece(e)) elems.push_back(e);
-    }
-    bool pertenece(const T &e) const {
-        return std::find(elems.begin(), elems.end(), e) != elems.end();
-    }
-    void eliminar(const T &e) {
-        elems.erase(std::remove(elems.begin(), elems.end(), e), elems.end());
-    }
-};
-
-#endif // CONJUNTO_H
-
-
-// Section.h
-#ifndef SECTION_H
-#define SECTION_H
-
-#include <string>
-#include <vector>
-#include "Conjunto.h"
-
-struct Professor {
-    std::string name;
-    long ci;
-};
-
-struct BlockSchedule {
-    int start_hour;
-    int duration;
-    int end_hour() const { return start_hour + duration; }
-};
-
-class Section {
-public:
-    std::string name;
-    std::vector<int> blocks;
-    Professor professor;
-    Conjunto<long> students;
-    std::vector<BlockSchedule> schedule;
-
-    Section(const std::string &name_, const std::vector<int> &blocks_);
-    void addStudent(long ci);
-    void setProfessor(const std::string &name, long ci);
-    void initSchedule();
-};
-
-#endif // SECTION_H
-
-
-// Section.cpp
-#include "Section.h"
-
-Section::Section(const std::string &name_, const std::vector<int> &blocks_)
-    : name(name_), blocks(blocks_) {
-    initSchedule();
-}
-
-void Section::addStudent(long ci) {
-    students.insertar(ci);
-}
-
-void Section::setProfessor(const std::string &name, long ci) {
-    professor.name = name;
-    professor.ci = ci;
-}
-
-void Section::initSchedule() {
-    schedule.clear();
-    schedule.reserve(blocks.size());
-    for (int dur : blocks) {
-        schedule.push_back(BlockSchedule{0, dur});
-    }
-}
-
-
-// main.cpp
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <vector>
 #include <iomanip>
 #include <algorithm>
-#include <cctype>
 #include "Section.h"
 
-// Función para recortar espacios al inicio y fin
 static inline std::string trim(const std::string &s) {
     size_t start = s.find_first_not_of(" \t\n\r");
     size_t end = s.find_last_not_of(" \t\n\r");
@@ -129,7 +37,6 @@ int main() {
         profPart = trim(profPart);
         studentsPart = trim(studentsPart);
 
-        // Parse blocks
         std::vector<int> blocks;
         std::istringstream bs(blocksPart);
         std::string tok;
@@ -140,38 +47,31 @@ int main() {
 
         Section sec(secName, blocks);
 
-        // Parse profesor: "Nombre,CI"
-        {
-            std::istringstream ps(profPart);
-            std::string name, ciStr;
-            std::getline(ps, name, ',');
-            std::getline(ps, ciStr, ',');
-            name = trim(name);
-            ciStr = trim(ciStr);
-            long ci = 0;
-            if (!ciStr.empty()) {
-                try { ci = std::stol(ciStr); }
-                catch (...) { ci = 0; }
-            }
-            sec.setProfessor(name, ci);
+        std::istringstream ps(profPart);
+        std::string name, ciStr;
+        std::getline(ps, name, ',');
+        std::getline(ps, ciStr, ',');
+        name = trim(name);
+        ciStr = trim(ciStr);
+        long ci = 0;
+        if (!ciStr.empty()) {
+            try { ci = std::stol(ciStr); }
+            catch (...) { ci = 0; }
         }
+        sec.setProfessor(name, ci);
 
-        // Parse students
-        {
-            std::istringstream es(studentsPart);
-            while (std::getline(es, tok, ',')) {
-                tok = trim(tok);
-                if (!tok.empty()) {
-                    try { sec.addStudent(std::stol(tok)); }
-                    catch (...) { /* omitir */ }
-                }
+        std::istringstream es(studentsPart);
+        while (std::getline(es, tok, ',')) {
+            tok = trim(tok);
+            if (!tok.empty()) {
+                try { sec.addStudent(std::stol(tok)); }
+                catch (...) { }
             }
         }
 
         sections.push_back(sec);
     }
 
-    // Input de horarios
     for (auto &sec : sections) {
         std::cout << "Sección " << sec.name << " (Prof. "
                   << sec.professor.name << "):\n";
@@ -187,7 +87,6 @@ int main() {
         std::cout << "\n";
     }
 
-    // Mostrar tabla
     std::cout << std::left << std::setw(12) << "Sección"
               << std::setw(15) << "Profesor";
     for (size_t i = 0; i < 3; ++i)

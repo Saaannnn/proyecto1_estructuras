@@ -11,8 +11,8 @@ struct Professor {
 };
 
 struct BlockSchedule {
-    int start_hour;   // hora de inicio (0-23)
-    int duration;     // duración en horas
+    int start_hour;
+    int duration;
     int end_hour() const { return start_hour + duration; }
 };
 
